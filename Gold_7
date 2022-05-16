@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Gold_7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int priceCrystal = 4;
+            int amountAurum;
+            int amountCrystal;
+
+            Console.WriteLine("Сколько золота у вас есть?");
+            amountAurum = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine($"Сколько кристаллов вы хотите купить? \nСтоимость 1 кристалла составляет {priceCrystal} золота");
+            amountCrystal = Convert.ToInt32(Console.ReadLine());
+
+            amountAurum -= priceCrystal * amountCrystal;
+            Console.WriteLine($"Вы получите {amountCrystal} кристаллов обменяв на свое золото \nУ вас останется {amountAurum} золота");
+
+        }
+    }
+}
