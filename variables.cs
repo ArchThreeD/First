@@ -16,7 +16,7 @@ namespace ConsoleApp3
             double constructionSpeed = 1.5;
             string heroName = "Arch";
             long maxDuty = -100000;
-            bool hunting = true;
+            bool isHunting = true;
             float viewingDistance = 31.2f;
             ulong amountOfGold = 1000000;
             short numberOfCitizens = 650;
