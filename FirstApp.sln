@@ -14,9 +14,11 @@ namespace FirstApp
             string name = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Введите свой знак зодиака:");
             string signZodiac = Convert.ToString(Console.ReadLine());
+            Console.WriteLine("Сколько вам лет?");
+            string age = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Кем вы работаете?");
             string work = Convert.ToString(Console.ReadLine());
-            Console.WriteLine($"Вас зовут: {name}\nВаш знак зодиака: {signZodiac}\nВы работаете {work}");       
+            Console.WriteLine($"Вас зовут: {name}\nВаш знак зодиака: {signZodiac}\nВам {age} год\nВы работаете {work}");    
         }
     }
 }
