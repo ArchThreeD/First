@@ -16,7 +16,7 @@ namespace FirstApp
             string signZodiac = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Кем вы работаете?");
             string work = Convert.ToString(Console.ReadLine());
-            Console.WriteLine($"Вас зовут: {name}\nВаш знак зодиака: {signZodiac}\nВы работаете {work}");            
+            Console.WriteLine($"Вас зовут: {name}\nВаш знак зодиака: {signZodiac}\nВы работаете {work}");       
         }
     }
 }
