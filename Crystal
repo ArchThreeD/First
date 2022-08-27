@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace crystal
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int gold;
+            int crystalPrice = 5;
+            int crystalCount;
+            bool enoughGold;
+
+            Console.WriteLine("Добро пожаловать в магазин кристаллов , у нас вы можете купить 1 кристалл за " + crystalPrice + " золота");
+            Console.Write("Сколько золота у вас имеется? : ");
+            gold = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Сколько кристаллов вы желаете приобрести? : ");
+            crystalCount = Convert.ToInt32(Console.ReadLine());
+            enoughGold = gold >= crystalPrice * crystalCount;
+            crystalCount *= Convert.ToInt32(enoughGold);
+            gold -= crystalPrice * crystalCount;
+            Console.WriteLine($"Поздравляем , вы приобрели {crystalCount} кристаллов и у вас осталось {gold} золота ");
+        }
+    }
+}
