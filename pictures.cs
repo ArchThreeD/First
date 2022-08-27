@@ -14,8 +14,8 @@ namespace picture
             int pictures = Convert.ToInt32(Console.ReadLine());
             int numberOfRows = pictures / 3;
             int remainder = pictures % 3;
-            Console.WriteLine(numberOfRows);
-            Console.WriteLine(remainder);
+            Console.WriteLine($"Колличество полностью заполненных рядов картинками равно {numberOfRows}");
+            Console.WriteLine($"Колличество картинок которые не вошли в полный ряд равно {remainder}");
         }
     }
 }
