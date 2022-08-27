@@ -12,10 +12,10 @@ namespace picture
         {
             int numberOfPicturesInRow = 3;
             int pictures = Convert.ToInt32(Console.ReadLine());
-            int numberOfRows = pictures / 3;
-            int remainder = pictures % 3;
+            int numberOfRows = pictures / numberOfPicturesInRow;
+            int numberOfExtraPictures = pictures % numberOfPicturesInRow;
             Console.WriteLine($"Колличество полностью заполненных рядов картинками равно {numberOfRows}");
-            Console.WriteLine($"Колличество картинок которые не вошли в полный ряд равно {remainder}");
+            Console.WriteLine($"Колличество картинок которые не вошли в полный ряд равно {numberOfExtraPictures}");
         }
     }
 }
