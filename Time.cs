@@ -15,12 +15,12 @@ namespace Time
             int minutes;
             int numberOfPeople;
             int time;
-            int oneHour = 60;
+            int oneHourInMinutes= 60;
             Console.Write("Какое количество людей перед вами в очереди?: ");
             numberOfPeople = Convert.ToInt32(Console.ReadLine());
             time = timePerPerson * numberOfPeople;
-            hours = time / oneHour; 
-            minutes = time % oneHour;
+            hours = time / oneHourInMinutes; 
+            minutes = time % oneHourInMinutes;
             Console.WriteLine($"Вам нужно отстоять в очереди {hours} часа и {minutes} минут ");
         }
     }
