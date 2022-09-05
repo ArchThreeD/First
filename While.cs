@@ -11,9 +11,9 @@ namespace While
     {
         static void Main(string[] args)
         {
-            int age = 10;
+            int hello = 10;
 
-            while (age-- > 0 )
+            while (hello-- > 0 )
             {
                 Console.WriteLine("Здравствуйте");
                 Thread.Sleep(500);
