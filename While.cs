@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace While
+namespace For
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int hello = 10;
+            int ammountOfFrames = 10;
 
-            while (hello-- > 0 )
+            for (int i = 0; i < ammountOfFrames; i++)
             {
-                Console.WriteLine("Здравствуйте");
+                Console.WriteLine("hello");
                 Thread.Sleep(500);
             }
         }
