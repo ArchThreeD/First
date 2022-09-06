@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +10,15 @@ namespace Money
     {
         static void Main(string[] args)
         {
-            double rubToUsd = 61.45, rubToKzt = 0.13, kztToUsd = 472.25;
-            double rub;
-            double usd;
-            double kzt;
+            double rubToUsd = 61.45;
+            double rubToKzt = 0.13;
+            double kztToUsd = 472.25;
+            double amountOfMoneyInRub;
+            double amountOfMoneyInUsd;
+            double amountOfMoneyInKzt;
             string userInput;
             double amountOfMoney;
             double remainderOfMoney;
-
 
             Console.WriteLine("Здравствуйте, у нас вы можете обменять доллары , рубли и тенге.");
             Console.WriteLine("В какую валюту вы хотите конвертировать?: ");
@@ -35,35 +36,33 @@ namespace Money
                     case "1":
                         Console.WriteLine("Обмен рублей на доллары");
                         Console.Write("Сколько у вас рублей?: ");
-                        rub = Convert.ToDouble(Console.ReadLine());
+                        amountOfMoneyInRub = Convert.ToDouble(Console.ReadLine());
                         Console.WriteLine("Сколько вы хотите обменять");
                         amountOfMoney = Convert.ToDouble(Console.ReadLine());
-                        if (rub >= amountOfMoney)
+                        if (amountOfMoneyInRub >= amountOfMoney)
                         {
-
-                            usd = amountOfMoney / rubToUsd;
-                            remainderOfMoney = rub - amountOfMoney;
-                            Console.WriteLine($"Вы получили {usd} долларов и у вас осталось {remainderOfMoney} рублей");
+                            amountOfMoneyInUsd = amountOfMoney / rubToUsd;
+                            remainderOfMoney = amountOfMoneyInRub - amountOfMoney;
+                            Console.WriteLine($"Вы получили {amountOfMoneyInUsd} долларов и у вас осталось {remainderOfMoney} рублей");
                         }
-                        else if (rub < amountOfMoney)
+                        else if (amountOfMoneyInRub < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
-
                         break;
                     case "2":
                         Console.WriteLine("Обмен рублей на тенге");
                         Console.Write("Сколько у вас рублей?: ");
-                        rub = Convert.ToDouble(Console.ReadLine());
+                        amountOfMoneyInRub = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Сколько вы хотите перевести рублей в тенге?: ");
                         amountOfMoney = Convert.ToSingle(Console.ReadLine());
-                        if (rub >= amountOfMoney)
+                        if (amountOfMoneyInRub >= amountOfMoney)
                         {
-                            kzt = amountOfMoney / rubToKzt;
-                            remainderOfMoney = rub - amountOfMoney;
-                            Console.WriteLine($"Вы получили {kzt} тенге и у вас осталось {remainderOfMoney} рублей");
+                            amountOfMoneyInKzt = amountOfMoney / rubToKzt;
+                            remainderOfMoney = amountOfMoneyInRub - amountOfMoney;
+                            Console.WriteLine($"Вы получили {amountOfMoneyInKzt} тенге и у вас осталось {remainderOfMoney} рублей");
                         }
-                        else if (rub < amountOfMoney)
+                        else if (amountOfMoneyInRub < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
@@ -71,53 +70,50 @@ namespace Money
                     case "3":
                         Console.WriteLine("Обмен долларов на рубли");
                         Console.Write("Сколько у вас долларов?: ");
-                        usd = Convert.ToDouble(Console.ReadLine());
+                        amountOfMoneyInUsd = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Сколько вы хотите перевести долларов в рубли?: ");
                         amountOfMoney = Convert.ToSingle(Console.ReadLine());
-                        if (usd >= amountOfMoney)
+                        if (amountOfMoneyInUsd >= amountOfMoney)
                         {
-                            rub = amountOfMoney * rubToUsd;
-                            remainderOfMoney = usd - amountOfMoney;
-                            Console.WriteLine($"Вы получили {rub} рублей и у вас осталось {remainderOfMoney} долларов");
+                            amountOfMoneyInRub = amountOfMoney * rubToUsd;
+                            remainderOfMoney = amountOfMoneyInUsd - amountOfMoney;
+                            Console.WriteLine($"Вы получили {amountOfMoneyInRub} рублей и у вас осталось {remainderOfMoney} долларов");
                         }
-                        else if (usd < amountOfMoney)
+                        else if (amountOfMoneyInUsd < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
-
                     case "4":
                         Console.WriteLine("Обмен долларов на тенге");
                         Console.Write("Сколько у вас долларов?: ");
-                        usd = Convert.ToDouble(Console.ReadLine());
+                        amountOfMoneyInUsd = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Сколько вы хотите перевести долларов в тенге?: ");
                         amountOfMoney = Convert.ToSingle(Console.ReadLine());
-                        if (usd >= amountOfMoney)
+                        if (amountOfMoneyInUsd >= amountOfMoney)
                         {
-                            kzt = amountOfMoney * kztToUsd;
-                            remainderOfMoney = usd - amountOfMoney;
-                            Console.WriteLine($"Вы получили {kzt} тенге и у вас осталось {remainderOfMoney} долларов");
+                            amountOfMoneyInKzt = amountOfMoney * kztToUsd;
+                            remainderOfMoney = amountOfMoneyInUsd - amountOfMoney;
+                            Console.WriteLine($"Вы получили {amountOfMoneyInKzt} тенге и у вас осталось {remainderOfMoney} долларов");
                         }
-                        else if (usd < amountOfMoney)
+                        else if (amountOfMoneyInUsd < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
-
                         break;
-
                     case "5":
                         Console.WriteLine("Обмен тенге на доллары");
                         Console.Write("Сколько у вас тенге?: ");
-                        kzt = Convert.ToDouble(Console.ReadLine());
+                        amountOfMoneyInKzt = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Сколько вы хотите перевести тенге в доллары?: ");
                         amountOfMoney = Convert.ToSingle(Console.ReadLine());
-                        if (kzt >= amountOfMoney)
+                        if (amountOfMoneyInKzt >= amountOfMoney)
                         {
-                            usd = amountOfMoney / kztToUsd;
-                            remainderOfMoney = kzt - amountOfMoney;
-                            Console.WriteLine($"Вы получили {usd} долларов и у вас осталось {remainderOfMoney} тенге");
+                            amountOfMoneyInUsd = amountOfMoney / kztToUsd;
+                            remainderOfMoney = amountOfMoneyInKzt - amountOfMoney;
+                            Console.WriteLine($"Вы получили {amountOfMoneyInUsd} долларов и у вас осталось {remainderOfMoney} тенге");
                         }
-                        else if (kzt < amountOfMoney)
+                        else if (amountOfMoneyInKzt < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
@@ -125,33 +121,29 @@ namespace Money
                     case "6":
                         Console.WriteLine("Обмен тенге на рубли");
                         Console.Write("Сколько у вас тенге?: ");
-                        kzt = Convert.ToDouble(Console.ReadLine());
+                        amountOfMoneyInKzt = Convert.ToDouble(Console.ReadLine());
                         Console.Write("Сколько вы хотите перевести тенге в рубли?: ");
                         amountOfMoney = Convert.ToSingle(Console.ReadLine());
-                        if (kzt >= amountOfMoney)
+                        if (amountOfMoneyInKzt >= amountOfMoney)
                         {
-                            rub = amountOfMoney * rubToKzt;
-                            remainderOfMoney = kzt - amountOfMoney;
-                            Console.WriteLine($"Вы получили {rub} рублей и у вас осталось {remainderOfMoney} тенге");
+                            amountOfMoneyInRub = amountOfMoney * rubToKzt;
+                            remainderOfMoney = amountOfMoneyInKzt - amountOfMoney;
+                            Console.WriteLine($"Вы получили {amountOfMoneyInRub} рублей и у вас осталось {remainderOfMoney} тенге");
                         }
-                        else if (kzt < amountOfMoney)
+                        else if (amountOfMoneyInKzt < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
-
                         break;
                     default:
                         Console.WriteLine("Повторите попытку еще раз");
                         break;
                 }
             }
-            catch 
-            {
-                Console.WriteLine("Ошибка при вводе данных.");
-            }
-        
-                
-            
+            catch            
+            {         
+            Console.WriteLine("Ошибка при вводе данных.");    
+            }         
         }
     }
 }
