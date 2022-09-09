@@ -11,8 +11,8 @@ namespace Exit
         static void Main(string[] args)
         {
             string exit;
-            int age = 100;
-            while(age-- > 0)
+            int kadrRate = 100;
+            while(kadrRate-- > 0)
             {                
                 Console.WriteLine("Hello");                
                 exit= Console.ReadLine();
