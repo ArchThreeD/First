@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +11,10 @@ namespace Pass
         static void Main(string[] args)
         {
             string password = "qwer";
+            bool passTry = false;
             string userInput;
-            int MaxAttempts = 3;
-            while (MaxAttempts-->0)
+            int maxAttempts = 3;
+            while (maxAttempts-->0 &! passTry==true)
             {
                 Console.Write("Введите пароль, для доступа к информации: ");
                 userInput = Console.ReadLine();
@@ -23,14 +24,14 @@ namespace Pass
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("Нужная вам вещь находится в правом ящике. Код (ЯРКОЕ СОЛНЦЕ)");
                     Console.ForegroundColor = defaultColor;
-                    break;
+                    passTry = true;
                 }
                 else
                 {
                     Console.WriteLine("Пробуйте снова");
                 }
             }
-            if (MaxAttempts < 0)
+            if (maxAttempts < 0)
             {
                 ConsoleColor defaultColor = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Red;
