@@ -11,29 +11,30 @@ namespace Pass
         static void Main(string[] args)
         {
             string password = "qwer";
-            bool passTry = false;
+            bool enteredPassTry = false;
             string userInput;
-            int maxAttempts = 3;
-            
-            while (maxAttempts-->0 &! passTry==true)
+            int maxAttempts;
+
+            for (maxAttempts = 0; maxAttempts < 3 &! enteredPassTry==true; maxAttempts++)
             {
                 Console.Write("Введите пароль, для доступа к информации: ");
                 userInput = Console.ReadLine();
-                
+
                 if (userInput == password)
                 {
                     ConsoleColor defaultColor = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     Console.WriteLine("Нужная вам вещь находится в правом ящике. Код (ЯРКОЕ СОЛНЦЕ)");
                     Console.ForegroundColor = defaultColor;
-                    passTry = true;
+                    enteredPassTry = true;
                 }
                 else
                 {
                     Console.WriteLine("Пробуйте снова");
                 }
             }
-            if (maxAttempts < 0)
+
+            if (maxAttempts == 3)
             {
                 ConsoleColor defaultColor = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Red;
