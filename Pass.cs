@@ -14,6 +14,7 @@ namespace Pass
             bool passTry = false;
             string userInput;
             int maxAttempts = 3;
+            
             while (maxAttempts-->0 &! passTry==true)
             {
                 Console.Write("Введите пароль, для доступа к информации: ");
