@@ -22,6 +22,12 @@ namespace Money
             string userInput;
             double amountOfMoney;
             double remainderOfMoney;
+            const string first = "1";
+            const string second = "2";
+            const string third = "3";
+            const string fourth = "4";
+            const string fifth = "5";
+            const string sixth = "6";
 
             Console.WriteLine("Здравствуйте, у нас вы можете обменять доллары , рубли и тенге.");
             Console.WriteLine("В какую валюту вы хотите конвертировать?: ");
@@ -36,7 +42,7 @@ namespace Money
             {
                 switch (userInput)
                 {
-                    case "1":
+                    case first:
                         Console.WriteLine("Обмен рублей на доллары");
                         Console.Write("Сколько у вас рублей?: ");
                         amountOfMoneyInRub = Convert.ToDouble(Console.ReadLine());
@@ -49,14 +55,13 @@ namespace Money
                             remainderOfMoney = amountOfMoneyInRub - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInUsd} долларов и у вас осталось {remainderOfMoney} рублей");
                         }
-
                         else if (amountOfMoneyInRub < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
 
-                    case "2":
+                    case second:
                         Console.WriteLine("Обмен рублей на тенге");
                         Console.Write("Сколько у вас рублей?: ");
                         amountOfMoneyInRub = Convert.ToDouble(Console.ReadLine());
@@ -69,14 +74,13 @@ namespace Money
                             remainderOfMoney = amountOfMoneyInRub - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInKzt} тенге и у вас осталось {remainderOfMoney} рублей");
                         }
-
                         else if (amountOfMoneyInRub < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
 
-                    case "3":
+                    case third:
                         Console.WriteLine("Обмен долларов на рубли");
                         Console.Write("Сколько у вас долларов?: ");
                         amountOfMoneyInUsd = Convert.ToDouble(Console.ReadLine());
@@ -89,14 +93,13 @@ namespace Money
                             remainderOfMoney = amountOfMoneyInUsd - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInRub} рублей и у вас осталось {remainderOfMoney} долларов");
                         }
-
                         else if (amountOfMoneyInUsd < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
 
-                    case "4":
+                    case fourth:
                         Console.WriteLine("Обмен долларов на тенге");
                         Console.Write("Сколько у вас долларов?: ");
                         amountOfMoneyInUsd = Convert.ToDouble(Console.ReadLine());
@@ -109,14 +112,13 @@ namespace Money
                             remainderOfMoney = amountOfMoneyInUsd - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInKzt} тенге и у вас осталось {remainderOfMoney} долларов");
                         }
-
                         else if (amountOfMoneyInUsd < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
 
-                    case "5":
+                    case fifth:
                         Console.WriteLine("Обмен тенге на доллары");
                         Console.Write("Сколько у вас тенге?: ");
                         amountOfMoneyInKzt = Convert.ToDouble(Console.ReadLine());
@@ -129,14 +131,13 @@ namespace Money
                             remainderOfMoney = amountOfMoneyInKzt - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInUsd} долларов и у вас осталось {remainderOfMoney} тенге");
                         }
-
                         else if (amountOfMoneyInKzt < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
 
-                    case "6":
+                    case sixth:
                         Console.WriteLine("Обмен тенге на рубли");
                         Console.Write("Сколько у вас тенге?: ");
                         amountOfMoneyInKzt = Convert.ToDouble(Console.ReadLine());
@@ -149,7 +150,6 @@ namespace Money
                             remainderOfMoney = amountOfMoneyInKzt - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInRub} рублей и у вас осталось {remainderOfMoney} тенге");
                         }
-
                         else if (amountOfMoneyInKzt < amountOfMoney)
                         {
                             Console.WriteLine("У вас недостаточно денег");
