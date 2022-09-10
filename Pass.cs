@@ -19,6 +19,7 @@ namespace Pass
             {
                 Console.Write("Введите пароль, для доступа к информации: ");
                 userInput = Console.ReadLine();
+                
                 if (userInput == password)
                 {
                     ConsoleColor defaultColor = Console.ForegroundColor;
