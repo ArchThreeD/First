@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +10,13 @@ namespace RandomI
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
-            int number = rand.Next(0, 101);
+            Random random = new Random();
+            int minValue = 0;
+            int maxValue = 101;
+            int number = random.Next(minValue, maxValue);
             int sum = 0;
             int firstMultiplicityNumber = 3;
             int secondMultiplicityNumber = 5;
-
             for (int i = 0; i <= number; i++)
             {
 
