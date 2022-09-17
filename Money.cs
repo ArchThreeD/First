@@ -10,12 +10,12 @@ namespace Money
     {
         static void Main(string[] args)
         {
-            const string FirstCase = "1";
-            const string SecondCase = "2";
-            const string ThirdCase = "3";
-            const string FourthCase = "4";
-            const string FifthCase = "5";
-            const string SixthCase = "6";
+            const string ExecutingFirstCommand = "1";
+            const string ExecutingSecondCommand = "2";
+            const string ExecutingThirdCommand = "3";
+            const string ExecutingFourthCommand = "4";
+            const string ExecutingFifthCommand = "5";
+            const string ExecutingSixthCommand = "6";
             double ConvertRubToUsdCommand = 61.45;
             double ConvertRubToKztCommand = 0.13;
             double ConvertKztToUsdCommand = 472.25;
@@ -40,8 +40,7 @@ namespace Money
 
             switch (userInput)
             {
-                    
-                    case FirstCase:
+                    case ExecutingFirstCommand:
                         Console.WriteLine("Обмен рублей на доллары");
                         Console.Write("Сколько у вас рублей?: ");
                         amountOfMoneyInRub = Convert.ToDouble(Console.ReadLine());
@@ -60,7 +59,7 @@ namespace Money
                         }
                         break;
 
-                    case SecondCase:
+                    case ExecutingSecondCommand:
                         Console.WriteLine("Обмен рублей на тенге");
                         Console.Write("Сколько у вас рублей?: ");
                         amountOfMoneyInRub = Convert.ToDouble(Console.ReadLine());
@@ -79,7 +78,7 @@ namespace Money
                         }
                         break;
 
-                    case ThirdCase:
+                    case ExecutingThirdCommand:
                         Console.WriteLine("Обмен долларов на рубли");
                         Console.Write("Сколько у вас долларов?: ");
                         amountOfMoneyInUsd = Convert.ToDouble(Console.ReadLine());
@@ -98,7 +97,7 @@ namespace Money
                         }
                         break;
 
-                    case FourthCase:
+                    case ExecutingFourthCommand:
                         Console.WriteLine("Обмен долларов на тенге");
                         Console.Write("Сколько у вас долларов?: ");
                         amountOfMoneyInUsd = Convert.ToDouble(Console.ReadLine());
@@ -117,7 +116,7 @@ namespace Money
                         }
                         break;
 
-                    case FifthCase:
+                    case ExecutingFifthCommand:
                         Console.WriteLine("Обмен тенге на доллары");
                         Console.Write("Сколько у вас тенге?: ");
                         amountOfMoneyInKzt = Convert.ToDouble(Console.ReadLine());
@@ -136,7 +135,7 @@ namespace Money
                         }
                         break;
 
-                    case SixthCase:
+                    case ExecutingSixthCommand:
                         Console.WriteLine("Обмен тенге на рубли");
                         Console.Write("Сколько у вас тенге?: ");
                         amountOfMoneyInKzt = Convert.ToDouble(Console.ReadLine());
@@ -154,7 +153,6 @@ namespace Money
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
-                    
                     default:
                         Console.WriteLine("Повторите попытку еще раз");
                         break;
