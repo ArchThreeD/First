@@ -10,38 +10,37 @@ namespace Money
     {
         static void Main(string[] args)
         {
-            double rubToUsd = 61.45;
-            double rubToKzt = 0.13;
-            double kztToUsd = 472.25;
-            double usdToRub = 0.01627;
-            double kztToRub = 7.69230;
-            double usdToKzt = 0.00211;
+            const string FirstCase = "1";
+            const string SecondCase = "2";
+            const string ThirdCase = "3";
+            const string FourthCase = "4";
+            const string FifthCase = "5";
+            const string SixthCase = "6";
+            double ConvertRubToUsdCommand = 61.45;
+            double ConvertRubToKztCommand = 0.13;
+            double ConvertKztToUsdCommand = 472.25;
+            double ConvertUsdToRubCommand = 0.01627;
+            double ConvertKztToRubCommand = 7.69230;
+            double ConvertUsdToKztCommand = 0.00211;
             double amountOfMoneyInRub;
             double amountOfMoneyInUsd;
             double amountOfMoneyInKzt;
             string userInput;
             double amountOfMoney;
             double remainderOfMoney;
-
             Console.WriteLine("Здравствуйте, у нас вы можете обменять доллары , рубли и тенге.");
             Console.WriteLine("В какую валюту вы хотите конвертировать?: ");
             Console.WriteLine("1 - обменять рубли на доллары");
-            const string FirstCase = "1";
             Console.WriteLine("2 - обменять рубли на тенге");
-            const string SecondCase = "2";
             Console.WriteLine("3 - обменять доллары на рубли");
-            const string ThirdCase = "3";
             Console.WriteLine("4 - обменять доллары на тенге");
-            const string FourthCase = "4";
             Console.WriteLine("5 - обменять тенге на доллары");
-            const string FifthCase = "5";
             Console.WriteLine("6 - обменять тенге на рубли");
-            const string SixthCase = "6";
             userInput = Console.ReadLine();
-            try
+
+            switch (userInput)
             {
-                switch (userInput)
-                {
+                    
                     case FirstCase:
                         Console.WriteLine("Обмен рублей на доллары");
                         Console.Write("Сколько у вас рублей?: ");
@@ -51,7 +50,7 @@ namespace Money
 
                         if (amountOfMoneyInRub >= amountOfMoney)
                         {
-                            amountOfMoneyInUsd = amountOfMoney * usdToRub;
+                            amountOfMoneyInUsd = amountOfMoney * ConvertUsdToRubCommand;
                             remainderOfMoney = amountOfMoneyInRub - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInUsd} долларов и у вас осталось {remainderOfMoney} рублей");
                         }
@@ -70,7 +69,7 @@ namespace Money
 
                         if (amountOfMoneyInRub >= amountOfMoney)
                         {
-                            amountOfMoneyInKzt = amountOfMoney * kztToRub;
+                            amountOfMoneyInKzt = amountOfMoney * ConvertKztToRubCommand;
                             remainderOfMoney = amountOfMoneyInRub - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInKzt} тенге и у вас осталось {remainderOfMoney} рублей");
                         }
@@ -89,7 +88,7 @@ namespace Money
 
                         if (amountOfMoneyInUsd >= amountOfMoney)
                         {
-                            amountOfMoneyInRub = amountOfMoney * rubToUsd;
+                            amountOfMoneyInRub = amountOfMoney * ConvertRubToUsdCommand;
                             remainderOfMoney = amountOfMoneyInUsd - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInRub} рублей и у вас осталось {remainderOfMoney} долларов");
                         }
@@ -108,7 +107,7 @@ namespace Money
 
                         if (amountOfMoneyInUsd >= amountOfMoney)
                         {
-                            amountOfMoneyInKzt = amountOfMoney * kztToUsd;
+                            amountOfMoneyInKzt = amountOfMoney * ConvertKztToUsdCommand;
                             remainderOfMoney = amountOfMoneyInUsd - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInKzt} тенге и у вас осталось {remainderOfMoney} долларов");
                         }
@@ -127,7 +126,7 @@ namespace Money
 
                         if (amountOfMoneyInKzt >= amountOfMoney)
                         {
-                            amountOfMoneyInUsd = amountOfMoney * usdToKzt;
+                            amountOfMoneyInUsd = amountOfMoney * ConvertUsdToKztCommand;
                             remainderOfMoney = amountOfMoneyInKzt - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInUsd} долларов и у вас осталось {remainderOfMoney} тенге");
                         }
@@ -146,7 +145,7 @@ namespace Money
 
                         if (amountOfMoneyInKzt >= amountOfMoney)
                         {
-                            amountOfMoneyInRub = amountOfMoney * rubToKzt;
+                            amountOfMoneyInRub = amountOfMoney * ConvertRubToKztCommand;
                             remainderOfMoney = amountOfMoneyInKzt - amountOfMoney;
                             Console.WriteLine($"Вы получили {amountOfMoneyInRub} рублей и у вас осталось {remainderOfMoney} тенге");
                         }
@@ -155,15 +154,10 @@ namespace Money
                             Console.WriteLine("У вас недостаточно денег");
                         }
                         break;
-
+                    
                     default:
                         Console.WriteLine("Повторите попытку еще раз");
                         break;
-                }
-            }
-            catch
-            {
-                Console.WriteLine("Ошибка при вводе данных.");
             }
         }
     }
